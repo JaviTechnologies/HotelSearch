@@ -14,10 +14,10 @@ using namespace std;
 
 namespace hotsearch
 {
-    TokenInvertedIndexDB::~TokenInvertedIndexDB()
-    {
-        delete library;
-    }
+//    TokenInvertedIndexDB::~TokenInvertedIndexDB()
+//    {
+//        delete library;
+//    }
     
     // void insertWord(string word, long documentId, InvertedIndexType entryType, LANGUAGE lang = LANGUAGE::EN):
     // ---

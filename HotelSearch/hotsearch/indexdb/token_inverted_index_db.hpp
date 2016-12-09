@@ -51,7 +51,7 @@ namespace hotsearch
         TokenInvertedIndexDB () { library = new TrieNode(); }
         
         // Destructor
-        ~TokenInvertedIndexDB();
+        ~TokenInvertedIndexDB() { delete library; }
         
         // void insertWord(string word, long documentId, InvertedIndexType entryType, LANGUAGE lang = LANGUAGE::EN):
         // ---
