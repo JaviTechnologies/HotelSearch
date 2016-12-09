@@ -17,6 +17,15 @@ using namespace std;
 
 namespace hotsearch
 {
+    /**
+     * GeolocationInvertedIndexDB uses a quadtree to map points to areas.
+     * Every leaf of the quadtree has a limit P of points to keep,
+     * when the P+1 element is added then the leaf subdivide itself and
+     * pass all the points to the children.
+     * This structure facilitates search by range because searches for identifiers
+     * only in the leafs that intersects with the range box.
+     * This takes O(log4 N) because of the quadtree.
+     */
     template <class T>
     class GeolocationInvertedIndexDB
     {

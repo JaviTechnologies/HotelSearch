@@ -91,6 +91,7 @@ void runSearchByAddressTests(hotsearch::HotelSearchEngine& searchEngine)
  */
 void runSearchByGeolocationTests(hotsearch::HotelSearchEngine& searchEngine)
 {
+    // TODO: add more tests. For now tests are manual.
     // "id": 100216
     float latitude = 38.723953f;
     float longitude = -9.148317f;

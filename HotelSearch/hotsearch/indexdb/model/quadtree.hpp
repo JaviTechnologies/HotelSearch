@@ -28,19 +28,29 @@ namespace hotsearch
         T load;
     };
     
+    /**
+     * Quadtree is a node that could be a leaf or an internal node. If it's internal node
+     * it has four children. if it's a leaf, it represents a unique box containing a spatial
+     * range of data entry (location points).
+     */
     template <class T>
     class QuadTree
     {
     private:
+        // box boundary
+        Box boundary;
+        
         // 4 children
         QuadTree<T>* NW;
         QuadTree<T>* NE;
         QuadTree<T>* SW;
         QuadTree<T>* SE;
-        Box boundary;
+        
+        // items
         vector<QuadTreeNodeData<T>> objects;
         static constexpr int capacity = 4;
         
+        //
         bool subdivide();
         
     public:
